@@ -1,0 +1,21 @@
+<template name="movieList">
+<view class='movie-list-container'>
+<view class='movie-head'>
+<text class='movie-title'>{{title}}</text>
+<view class='more' bindtap='more' data-title="{{title}}">更多</view>
+</view>
+<view class='content-list'>
+<view class='item' wx:for="{{movie}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='navto'>
+<image src='{{item.images.large}}'></image>
+<text class='item-title'>{{item.title}}</text>
+<view class='stars'>
+<text>豆瓣评分：</text><text class='stars-score'>{{item.rating.average}}</text>
+</view>
+</view>
+
+
+
+
+</view>
+</view>
+</template>

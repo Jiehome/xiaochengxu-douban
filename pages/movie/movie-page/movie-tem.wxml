@@ -1,0 +1,16 @@
+<template name="movie-tem">
+
+<view class='page-movie'>
+<view class='page-list'>
+
+<view class='item' wx:for="{{movie}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='navto'>
+<image src='{{item.images.large}}'></image>
+<view class='item-title'>{{item.title}}</view>
+<view class='stars'>
+<text>豆瓣评分：</text><text class='stars-score'>{{item.rating.average}}</text>
+</view>
+</view>
+
+</view>
+</view>
+</template >

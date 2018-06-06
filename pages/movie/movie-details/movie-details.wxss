@@ -1,0 +1,38 @@
+@import "../loading";
+.details-header{overflow: hidden;position:relative;height:360rpx}
+.bg-img{filter: blur(20rpx);-webkit-filter: blur(20rpx);}
+.bg-color{background:rgba(0,0,0,0.5);height:100%;position: absolute;width:100%;top:0;left:0}
+.details-header-content{
+  position:absolute;
+  top:0;
+  left:0;
+  padding:20rpx;
+  display: flex;
+
+}
+.details-header-img{width:250rpx;height:320rpx;}
+.details-header-img image{width:100%;height:100%;}
+.details-header-text{margin-left:20rpx;color:#fff;padding-top:10rpx;font-size: 28rpx;}
+.details-starring{width:420rpx;  overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+.details-eg,.details-title{width:400rpx;  overflow: hidden; white-space: nowrap;text-overflow: ellipsis;font-size: 44rpx}
+.details-eg{font-size: 38rpx}
+.details-plot{padding:40rpx;color: #666;font-size: 26rpx;line-height: 40rpx}
+.details-plot text{display: block;font-weight: 500;color: #999;font-size: 34rpx;margin-bottom:20rpx;}
+.details-casts{margin-left:20rpx;font-size: 34rpx;color: #666; }
+.scroll-view_H{
+  white-space: nowrap;margin-top: 20rpx;
+}
+
+.scroll-view-item_H{
+  display: inline-block;width:250rpx;height:320rpx;margin-left:20rpx
+}
+.scroll-view-item_H image{width:100%;height: 100%}
+.scroll-name{display: block;text-align: center;font-size: 26rpx}
+.scroll-view-item_H:last-child{margin-right: 20rpx}
+.popular_reviews{padding:20rpx}
+.popular_reviews .hot{font-size: 32rpx;color:#666;}
+.main-hd{padding:20rpx 0}
+.main-hd .user-name{color:#333; font-size: 34rpx}
+.main-hd image{width:80rpx;height:80rpx;border-radius: 50%;vertical-align: middle;margin-right: 20rpx}
+.review-content{font-size: 26rpx;color:#666;line-height: 42rpx}
+.details-data{width:380rpx; overflow: hidden;text-overflow:ellipsis;white-space: nowrap}

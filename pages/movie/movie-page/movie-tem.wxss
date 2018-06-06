@@ -1,0 +1,8 @@
+.page-list{margin:40rpx 0}
+.page-list .item{float: left;padding-left:38rpx}
+.page-list .item image{width:200rpx;height:270rpx;display: block}
+.page-list .item-title{margin:10rpx 0;max-width: 200rpx;overflow: hidden; text-overflow:ellipsis; white-space: nowrap;}
+.page-list .item-title,.stars{font-size: 24rpx;display: block}
+.page-list .stars{margin-bottom: 20rpx}
+.page-list .stars-score{color:#faaf00;font-weight: 700}
+

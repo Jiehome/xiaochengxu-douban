@@ -1,0 +1,6 @@
+<import src="movie-tem" />
+<import src="../loading" />
+<template is="loading" data="{{loading}}"></template>
+<template is="movie-tem" data="{{movie}}">
+
+</template>

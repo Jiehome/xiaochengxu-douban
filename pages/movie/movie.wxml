@@ -1,0 +1,22 @@
+<import src="movie-list/movie-list" />
+<import src="movie-page/movie-tem" />
+<import src="loading" />
+<template is="loading" data="{{loading}}"></template>
+<view class='search'>
+<icon type='search' size='15' class='icon-search'></icon>
+<input type='text' placeholder='请输入搜索内容' placeholder-class='placeholder' bindfocus='onbindfocus' bindinput="onbindchange" value='{{inputve}}'></input>
+<icon type='clear' size='15' class='icon-search' wx:if="{{clear}}" bindtap='onclear'></icon>
+</view>
+<block wx:if="{{!loading}}">
+<view class='container' wx:if="{{listContent}}">
+<view class='movie-list'>
+<template is="movieList" data="{{...hits}}"></template>
+<template is="movieList" data="{{...releases}}"></template>
+<template is="movieList" data="{{...top250s}}"></template>
+</view>
+</view>
+</block>
+<view  wx:if="{{searchCotent}}">
+<template is="movie-tem" data="{{...search}}"></template>
+</view>
+
