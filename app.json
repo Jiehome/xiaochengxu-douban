@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/movie/movie",
+    "pages/me/me",
     "pages/movie/movie-page/movie-page",
     "pages/movie/movie-details/movie-details",
     "pages/index/index",
@@ -11,6 +12,24 @@
     "navigationBarBackgroundColor": "#e54847",
     "navigationBarTitleText": "豆瓣电影",
     "navigationBarTextStyle":"white"
-    
+  },
+  "tabBar": {
+    "selectedColor": "#e54847",
+    "backgroundColor":"white",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "iconPath":"pages/image/movie.png",
+        "selectedIconPath":"pages/image/selected-movie.png",
+        
+        "text": "电影"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "pages/image/me.png",
+        "selectedIconPath": "pages/image/selected-me.png",
+        "text": "我的"
+      }
+    ]
   }
 }

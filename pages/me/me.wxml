@@ -1,0 +1,19 @@
+<!--pages/me/me.wxml-->
+<import src="../movie/movie-page/movie-tem" />
+<view class='me'>
+  <view class='me-header'>
+    <image src='../image/bg-header.jpg' class='bg-header'></image>
+    <view class='me-content'>
+      <view  class='me-portrait'>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      </view>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <view class="user-location">{{userInfo.province}},{{userInfo.city}}</view>
+    </view>
+  </view>
+  <view class='me-recommended'>
+  <text class='recommended-title'>推荐影片</text>
+<template is="movie-tem" data="{{...recommended}}"></template>
+
+  </view>
+</view>
