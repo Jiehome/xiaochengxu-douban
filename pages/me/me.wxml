@@ -1,14 +1,18 @@
 <!--pages/me/me.wxml-->
 <import src="../movie/movie-page/movie-tem" />
 <view class='me'>
-  <view class='me-header'>
-    <image src='../image/bg-header.jpg' class='bg-header'></image>
+<view class='skin' bindtap='skin'>
+<image src='../image/skin.png'></image>
+</view>
+  <view class='me-header' >
+    <image src='{{bgheader}}' class='bg-header'></image>
     <view class='me-content'>
       <view  class='me-portrait'>
-        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" wx:if="{{userInfo.avatarUrl}}"></image>
+        <image class="userinfo-avatar" src="../image/me.png" background-size="cover" style='padding:10rpx' wx:if="{{!userInfo.nickName}}"></image>
       </view>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <view class="user-location">{{userInfo.province}},{{userInfo.city}}</view>
+      <text class="userinfo-nickname" wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</text>
+      <view class="user-location" wx:if="{{userInfo.province}}">{{userInfo.province}},{{userInfo.city}}</view>
     </view>
   </view>
   <view class='me-recommended'>

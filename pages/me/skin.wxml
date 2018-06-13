@@ -1,0 +1,5 @@
+<view class='skin'>
+<view wx:for="{{list}}" wx:key="index" bindtap='skin' >
+<image src='{{item.url}}' data-url="{{item.url}}"></image>
+</view>
+</view>

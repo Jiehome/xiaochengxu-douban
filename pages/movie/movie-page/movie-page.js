@@ -22,7 +22,7 @@ Page({
       that.setData({
         loading: false
       })
-    }, 1000)
+    }, 2000)
     wx.setNavigationBarTitle({
       title: title
     })

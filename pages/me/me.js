@@ -6,13 +6,26 @@ Page({
    */
   data: {
     userInfo:"",
-    recommended:{}
+    recommended:{},
+    bgheader:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let bgarr = "../image/bg-header1.jpg"
+    if (wx.getStorageSync("bg")) {
+      this.setData({
+        bgheader: wx.getStorageSync("bg")
+      })
+    } else {
+      wx.setStorageSync("bg", bgarr)
+      this.setData({
+        bgheader: wx.getStorageSync("bg")
+      })
+
+    }
     var that=this
     app.getUserInfo(function (userInfo) {
       //更新数据
@@ -37,18 +50,27 @@ Page({
       url: '../movie/movie-details/movie-details?id=' + event.currentTarget.dataset.id,
     })
   },
+  skin:function(event){
+   
+    wx.navigateTo({
+      url: 'skin',
+    })
+  
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+  
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    this.setData({
+      bgheader: wx.getStorageSync("bg")
+    })
   },
 
   /**
